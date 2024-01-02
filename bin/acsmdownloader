@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+filename=$(basename -- "$1")
+filename="${filename%.*}"
+filename=$filename".epub"
+
+/home/bpipa/bin/knock $1
+rm -f $1
+mv "/home/bpipa/Downloads/$filename" /home/bpipa/Downloads/books/
+/home/bpipa/bin/epubrenamer -f /home/bpipa/Downloads/
+mpg123 /home/bpipa/bin/resources/download.mp3

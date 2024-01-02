@@ -1,0 +1,1 @@
+java -jar /home/bpipa/Apps/epubcoverextractor/epub-cover-extractor-1.2.jar $@
